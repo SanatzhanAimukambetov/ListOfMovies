@@ -3,18 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89DA00012577D20A00CAD104 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 89DA00002577D20A00CAD104 /* SnapKit */; };
 		89DAFFBA2577CD5900CAD104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAFFB92577CD5900CAD104 /* AppDelegate.swift */; };
-		89DAFFBC2577CD5900CAD104 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAFFBB2577CD5900CAD104 /* SceneDelegate.swift */; };
 		89DAFFBE2577CD5900CAD104 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAFFBD2577CD5900CAD104 /* ViewController.swift */; };
-		89DAFFC12577CD5900CAD104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DAFFBF2577CD5900CAD104 /* Main.storyboard */; };
 		89DAFFC32577CD5D00CAD104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89DAFFC22577CD5D00CAD104 /* Assets.xcassets */; };
 		89DAFFC62577CD5D00CAD104 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DAFFC42577CD5D00CAD104 /* LaunchScreen.storyboard */; };
 		89DAFFD12577CD5D00CAD104 /* ListOfMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAFFD02577CD5D00CAD104 /* ListOfMoviesTests.swift */; };
 		89DAFFDC2577CD5D00CAD104 /* ListOfMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAFFDB2577CD5D00CAD104 /* ListOfMoviesUITests.swift */; };
+		89DAFFF02577CF5600CAD104 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAFFEF2577CF5600CAD104 /* TableViewCell.swift */; };
+		89DAFFF52577CF8300CAD104 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAFFF42577CF8300CAD104 /* TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +38,7 @@
 /* Begin PBXFileReference section */
 		89DAFFB62577CD5900CAD104 /* ListOfMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListOfMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DAFFB92577CD5900CAD104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		89DAFFBB2577CD5900CAD104 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89DAFFBD2577CD5900CAD104 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		89DAFFC02577CD5900CAD104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89DAFFC22577CD5D00CAD104 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89DAFFC52577CD5D00CAD104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89DAFFC72577CD5D00CAD104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +48,8 @@
 		89DAFFD72577CD5D00CAD104 /* ListOfMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListOfMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DAFFDB2577CD5D00CAD104 /* ListOfMoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMoviesUITests.swift; sourceTree = "<group>"; };
 		89DAFFDD2577CD5D00CAD104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89DAFFEF2577CF5600CAD104 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		89DAFFF42577CF8300CAD104 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DA00012577D20A00CAD104 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,9 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				89DAFFB92577CD5900CAD104 /* AppDelegate.swift */,
-				89DAFFBB2577CD5900CAD104 /* SceneDelegate.swift */,
 				89DAFFBD2577CD5900CAD104 /* ViewController.swift */,
-				89DAFFBF2577CD5900CAD104 /* Main.storyboard */,
+				89DAFFF42577CF8300CAD104 /* TableView.swift */,
+				89DAFFEF2577CF5600CAD104 /* TableViewCell.swift */,
 				89DAFFC22577CD5D00CAD104 /* Assets.xcassets */,
 				89DAFFC42577CD5D00CAD104 /* LaunchScreen.storyboard */,
 				89DAFFC72577CD5D00CAD104 /* Info.plist */,
@@ -144,6 +146,9 @@
 			dependencies = (
 			);
 			name = ListOfMovies;
+			packageProductDependencies = (
+				89DA00002577D20A00CAD104 /* SnapKit */,
+			);
 			productName = ListOfMovies;
 			productReference = 89DAFFB62577CD5900CAD104 /* ListOfMovies.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 89DAFFAD2577CD5900CAD104;
+			packageReferences = (
+				89DAFFFF2577D20A00CAD104 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 89DAFFB72577CD5900CAD104 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +241,6 @@
 			files = (
 				89DAFFC62577CD5D00CAD104 /* LaunchScreen.storyboard in Resources */,
 				89DAFFC32577CD5D00CAD104 /* Assets.xcassets in Resources */,
-				89DAFFC12577CD5900CAD104 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				89DAFFBE2577CD5900CAD104 /* ViewController.swift in Sources */,
+				89DAFFF52577CF8300CAD104 /* TableView.swift in Sources */,
+				89DAFFF02577CF5600CAD104 /* TableViewCell.swift in Sources */,
 				89DAFFBA2577CD5900CAD104 /* AppDelegate.swift in Sources */,
-				89DAFFBC2577CD5900CAD104 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +304,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		89DAFFBF2577CD5900CAD104 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				89DAFFC02577CD5900CAD104 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		89DAFFC42577CD5D00CAD104 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -587,6 +587,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		89DAFFFF2577D20A00CAD104 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89DA00002577D20A00CAD104 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89DAFFFF2577D20A00CAD104 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89DAFFAE2577CD5900CAD104 /* Project object */;
 }
