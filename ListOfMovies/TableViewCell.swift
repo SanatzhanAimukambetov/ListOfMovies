@@ -10,21 +10,35 @@ import SnapKit
 
 class TableViewCell: UITableViewCell {
     
-    let moviePoster: UIImageView = {
-        let image = UIImageView()
-        return image
+    let view: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 20
+        view.backgroundColor = UIColor(red: 64/255, green: 148/255, blue: 76/255, alpha: 1)
+        view.layer.shadowRadius = 20
+        view.layer.shadowColor = UIColor.black.cgColor
+        return view
     }()
     
     let titleOfMovieLabel: UILabel = {
        let label = UILabel()
         label.textColor = .white
+        label.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
         return label
     }()
     
-    let overviewOfMovieLabel: UILabel = {
-       let label = UILabel()
-        label.textColor = .white
-        return label
+    let overviewOfMovieLabel: UITextView = {
+       let text = UITextView()
+        text.textColor = .white
+        text.backgroundColor = UIColor(red: 64/255, green: 148/255, blue: 76/255, alpha: 1)
+        text.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 16)
+        return text
+    }()
+    
+    let moviePoster: UIImageView = {
+        let image = UIImageView()
+        image.layer.masksToBounds = true
+        image.layer.cornerRadius = 15
+        return image
     }()
     
     static let reuseID = "TableViewCell"
@@ -33,9 +47,9 @@ class TableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: "TableViewCell")
         
-        self.backgroundColor = .black
+        self.backgroundColor = UIColor(red: 245/255, green: 202/255, blue: 60/255, alpha: 1)
         
-        addSubview(titleOfMovieLabel)
+        setupViews()
         setupConstraints()
     }
     
@@ -52,7 +66,7 @@ class TableViewCell: UITableViewCell {
         self.overviewOfMovieLabel.text = overview
         
         guard let posterString = poster else { return }
-        urlString = "https://image.tmdp.org/t/p/w300" + posterString
+        urlString = "https://image.tmdb.org/t/p/w300" + posterString
         
         guard let posterImageURL = URL(string: urlString) else {
             self.moviePoster.image = UIImage(named: "noImage")
@@ -87,10 +101,34 @@ class TableViewCell: UITableViewCell {
     
     private func setupConstraints() {
         
-        titleOfMovieLabel.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().inset(10)
+        view.snp.makeConstraints { (make) in
+            make.leading.trailing.equalToSuperview().inset(10)
+            make.top.bottom.equalToSuperview().inset(5)
         }
+        
+        titleOfMovieLabel.snp.makeConstraints { (make) in
+            make.leading.equalTo(moviePoster.snp.trailing).offset(15)
+            make.top.equalToSuperview().inset(10)
+        }
+        
+        overviewOfMovieLabel.snp.makeConstraints { (make) in
+            make.leading.equalTo(moviePoster.snp.trailing).offset(10)
+            make.top.equalTo(titleOfMovieLabel.snp.bottom).offset(5)
+            make.trailing.equalToSuperview().inset(10)
+            make.bottom.equalToSuperview().inset(10)
+        }
+        
+        moviePoster.snp.makeConstraints { (make) in
+            make.leading.top.bottom.equalToSuperview().inset(10)
+            make.width.equalTo(120)
+        }
+    }
+    
+    private func setupViews() {
+        addSubview(view)
+        view.addSubview(titleOfMovieLabel)
+        view.addSubview(overviewOfMovieLabel)
+        view.addSubview(moviePoster)
     }
 
 }

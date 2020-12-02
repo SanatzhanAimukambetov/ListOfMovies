@@ -21,7 +21,7 @@ class TableView: UITableView {
         }
         
         
-        
+        self.separatorStyle = .none
         self.backgroundColor = .black
         
         register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.reuseID)
