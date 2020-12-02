@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		89DA00012577D20A00CAD104 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 89DA00002577D20A00CAD104 /* SnapKit */; };
+		89DA00062578213500CAD104 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA00052578213500CAD104 /* Model.swift */; };
+		89DA000B2578220A00CAD104 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA000A2578220A00CAD104 /* ApiService.swift */; };
+		89DA00102578268700CAD104 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA000F2578268700CAD104 /* MovieViewModel.swift */; };
 		89DAFFBA2577CD5900CAD104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAFFB92577CD5900CAD104 /* AppDelegate.swift */; };
 		89DAFFBE2577CD5900CAD104 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DAFFBD2577CD5900CAD104 /* ViewController.swift */; };
 		89DAFFC32577CD5D00CAD104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89DAFFC22577CD5D00CAD104 /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89DA00052578213500CAD104 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		89DA000A2578220A00CAD104 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		89DA000F2578268700CAD104 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		89DAFFB62577CD5900CAD104 /* ListOfMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListOfMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DAFFB92577CD5900CAD104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89DAFFBD2577CD5900CAD104 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +111,9 @@
 				89DAFFBD2577CD5900CAD104 /* ViewController.swift */,
 				89DAFFF42577CF8300CAD104 /* TableView.swift */,
 				89DAFFEF2577CF5600CAD104 /* TableViewCell.swift */,
+				89DA00052578213500CAD104 /* Model.swift */,
+				89DA000F2578268700CAD104 /* MovieViewModel.swift */,
+				89DA000A2578220A00CAD104 /* ApiService.swift */,
 				89DAFFC22577CD5D00CAD104 /* Assets.xcassets */,
 				89DAFFC42577CD5D00CAD104 /* LaunchScreen.storyboard */,
 				89DAFFC72577CD5D00CAD104 /* Info.plist */,
@@ -265,9 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DA00062578213500CAD104 /* Model.swift in Sources */,
 				89DAFFBE2577CD5900CAD104 /* ViewController.swift in Sources */,
+				89DA000B2578220A00CAD104 /* ApiService.swift in Sources */,
 				89DAFFF52577CF8300CAD104 /* TableView.swift in Sources */,
 				89DAFFF02577CF5600CAD104 /* TableViewCell.swift in Sources */,
+				89DA00102578268700CAD104 /* MovieViewModel.swift in Sources */,
 				89DAFFBA2577CD5900CAD104 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

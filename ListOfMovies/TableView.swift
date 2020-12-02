@@ -9,11 +9,18 @@ import UIKit
 
 class TableView: UITableView {
     
+    private var viewModel = MovieViewModel()
+    
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
-        delegate = self
-        dataSource = self
+        viewModel.fetchPopularMoviesData { [weak self] in
+            self?.delegate = self
+            self?.dataSource = self
+            self?.reloadData()
+        }
+        
+        
         
         self.backgroundColor = .black
         
@@ -28,11 +35,19 @@ class TableView: UITableView {
 
 extension TableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return viewModel.numberOfRowsInSection(section: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseID, for: indexPath) as! TableViewCell
+        
+        let movie = viewModel.cellForRowAt(indexPath: indexPath)
+        cell.setCellWithValuesOf(movie)
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
 }
