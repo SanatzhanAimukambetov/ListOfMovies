@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8905F4F5257A908B0003A9EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8905F4F4257A908B0003A9EA /* Alamofire */; };
 		89DA00012577D20A00CAD104 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 89DA00002577D20A00CAD104 /* SnapKit */; };
 		89DA00062578213500CAD104 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA00052578213500CAD104 /* Model.swift */; };
 		89DA000B2578220A00CAD104 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA000A2578220A00CAD104 /* ApiService.swift */; };
@@ -64,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89DA00012577D20A00CAD104 /* SnapKit in Frameworks */,
+				8905F4F5257A908B0003A9EA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,7 @@
 			name = ListOfMovies;
 			packageProductDependencies = (
 				89DA00002577D20A00CAD104 /* SnapKit */,
+				8905F4F4257A908B0003A9EA /* Alamofire */,
 			);
 			productName = ListOfMovies;
 			productReference = 89DAFFB62577CD5900CAD104 /* ListOfMovies.app */;
@@ -231,6 +234,7 @@
 			mainGroup = 89DAFFAD2577CD5900CAD104;
 			packageReferences = (
 				89DAFFFF2577D20A00CAD104 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8905F4F3257A908B0003A9EA /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 89DAFFB72577CD5900CAD104 /* Products */;
 			projectDirPath = "";
@@ -449,6 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35VQYXQGSS;
 				INFOPLIST_FILE = ListOfMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -467,6 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35VQYXQGSS;
 				INFOPLIST_FILE = ListOfMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -601,6 +607,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8905F4F3257A908B0003A9EA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 		89DAFFFF2577D20A00CAD104 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -612,6 +626,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8905F4F4257A908B0003A9EA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8905F4F3257A908B0003A9EA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		89DA00002577D20A00CAD104 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 89DAFFFF2577D20A00CAD104 /* XCRemoteSwiftPackageReference "SnapKit" */;
