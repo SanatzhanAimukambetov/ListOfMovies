@@ -32,13 +32,6 @@ class TableView: UITableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-}
-
-extension TableView: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRowsInSection(section: section)
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseID, for: indexPath) as! TableViewCell
         
@@ -46,6 +39,13 @@ extension TableView: UITableViewDelegate, UITableViewDataSource {
         cell.setCellWithValuesOf(movie)
         
         return cell
+    }
+    
+}
+
+extension TableView: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsInSection(section: section)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
