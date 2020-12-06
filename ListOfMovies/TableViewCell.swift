@@ -47,8 +47,6 @@ class TableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: "TableViewCell")
         
-        self.backgroundColor = UIColor(red: 245/255, green: 202/255, blue: 60/255, alpha: 1)
-        
         setupViews()
         setupConstraints()
     }
@@ -129,6 +127,8 @@ class TableViewCell: UITableViewCell {
         view.addSubview(titleOfMovieLabel)
         view.addSubview(overviewOfMovieLabel)
         view.addSubview(moviePoster)
+        
+        self.backgroundColor = UIColor(red: 245/255, green: 202/255, blue: 60/255, alpha: 1)
     }
 
 }
