@@ -12,11 +12,13 @@ class ViewController: UIViewController {
     
     let topView = UIView()
     let tableView = TableView()
+    let apiService = ApiService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
+        apiService.fetchFilms()
         
     }
     

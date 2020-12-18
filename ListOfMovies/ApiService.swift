@@ -12,6 +12,16 @@ class ApiService {
     
     private var dataTask: URLSessionDataTask?
     
+    func fetchFilms() {
+        
+        let request = AF.request("https://api.themoviedb.org/3/movie/popular?api_key=0ad3cc9cbbd41cf06629ec9410e626b9&language=en-US&page=2")
+        
+        request.responseJSON { (data) in
+            print(data)
+        }
+        
+    }
+    
     func getPopularMoviesData(completion: @escaping (Result<MoviesData, Error>) -> Void) {
         
         let popularMoviesURL = "https://api.themoviedb.org/3/movie/popular?api_key=0ad3cc9cbbd41cf06629ec9410e626b9&language=en-US&page=2"

@@ -20,10 +20,8 @@ class TableView: UITableView {
             self?.reloadData()
         }
         
-        
         self.separatorStyle = .none
         self.backgroundColor = UIColor(red: 245/255, green: 202/255, blue: 60/255, alpha: 1)
-
         
         register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.reuseID)
     }
