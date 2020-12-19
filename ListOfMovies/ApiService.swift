@@ -14,7 +14,7 @@ class ApiService {
     
     func fetchFilms() {
         
-        let request = AF.request("https://api.themoviedb.org/3/movie/popular?api_key=0ad3cc9cbbd41cf06629ec9410e626b9&language=en-US&page=2")
+        let request = AF.request("https://api.themoviedb.org/3/movie/popular?api_key=0ad3cc9cbbd41cf06629ec9410e626b9&language=en-US&page=3")
         
         request.responseJSON { (data) in
             print(data)

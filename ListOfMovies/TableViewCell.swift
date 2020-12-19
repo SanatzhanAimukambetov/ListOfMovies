@@ -123,6 +123,7 @@ class TableViewCell: UITableViewCell {
     }
     
     private func setupViews() {
+        
         addSubview(view)
         view.addSubview(titleOfMovieLabel)
         view.addSubview(overviewOfMovieLabel)
