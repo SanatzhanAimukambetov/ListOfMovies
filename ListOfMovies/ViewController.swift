@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
+        setupConstraints()
         apiService.fetchFilms()
         
     }
@@ -27,8 +28,12 @@ class ViewController: UIViewController {
         view.addSubview(topView)
         view.addSubview(tableView)
         
-        view.backgroundColor = UIColor(red: 245/255, green: 202/255, blue: 60/255, alpha: 1)
-        topView.backgroundColor = UIColor(red: 64/255, green: 148/255, blue: 76/255, alpha: 1)
+        view.backgroundColor = Constants.yellowColor
+        topView.backgroundColor = Constants.greenColor
+    
+    }
+    
+    private func setupConstraints() {
         
         topView.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
